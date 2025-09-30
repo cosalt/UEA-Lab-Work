@@ -50,3 +50,13 @@ a:hover {
 a:visited {
     color:003366;
 }
+
+main {
+    margin-top: auto;
+    margin-bottom: auto;
+    margin-left: 20%;
+    margin-right: 20%;
+    padding: 16px;
+    border: 2px solid #a6a0ba;
+    border-radius: 20px;
+}

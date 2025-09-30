@@ -16,7 +16,37 @@ header {
     text-align: center;
     height: 100px;
 }
+
 header h1 {
     padding: 16px;
     line-height: 200%;
+}
+
+nav ul {
+    list-style-type: none;
+}
+
+nav ul li {
+    display: inline;
+    margin-right: 25px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    padding: 5px;
+}
+
+nav {
+    text-align: center;
+    padding: 8px;
+    height: 100px;
+}
+
+a:hover {
+    background-color: #7f869a;
+    color: #ffffff;
+}
+
+a:visited {
+    color:003366;
 }

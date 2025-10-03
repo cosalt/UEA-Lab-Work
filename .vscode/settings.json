@@ -1,0 +1,13 @@
+{
+    "folders": [
+        {
+            "path": "."
+        }
+    ],
+    "settings": {
+        "java.project.sourcePaths": [
+            "Programming 1/Week 1/src",
+            "Programming 1/Week 2/src"
+        ]
+    }
+}

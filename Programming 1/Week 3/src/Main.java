@@ -4,49 +4,37 @@ import java.util.Locale;
 public class Main{
     public static void main(String[] args) {
 
-        // ======================================================================
         // Question 1
         // Computes the cost of driving 100km.
-        // ======================================================================
         System.out.println("## Question 1: Petrol Cost Calculation\n");
 
-        // --- Givens ---
-        double kmPerMile = 1 / 0.6214; // How many km in one mile
+        double kmPerMile = 1 / 0.6214; // km in one mile
         double litresPerPint = 0.5683;
         int pintsPerGallon = 8;
-        double costPerLitre = 1.34; // in GBP
-        double carMpg = 30.0; // miles per gallon
+        double costPerLitre = 1.34; // GBP
+        double carMpg = 30.0;
         double distanceKm = 100.0;
 
-        // --- Calculations ---
-
-        // 1. Efficiency in kilometers per gallon
         double kpg = carMpg * kmPerMile;
 
-        // 2. Distance travelled per litre
         double litresPerGallon = pintsPerGallon * litresPerPint;
-        double kpl = kpg / litresPerGallon; // kilometers per litre
-        double metersPerLitre = kpl * 1000; // convert km to m
+        double kpl = kpg / litresPerGallon; // km per litre
+        double metersPerLitre = kpl * 1000; //  km to m
 
-        // 3. Cost of driving 100 kilometers
         double litresNeeded = distanceKm / kpl;
         double totalCost = litresNeeded * costPerLitre;
 
-        // --- Output ---
         System.out.printf("Efficiency (km per gallon): %.2f\n", kpg);
         System.out.printf("Distance per litre (m): %.0f\n", metersPerLitre);
 
-        // Use NumberFormat for currency appropriate to the default locale
-        NumberFormat currencyFormatter = NumberFormat.getCurrencyInstance(Locale.getDefault());
+        NumberFormat currencyFormatter = NumberFormat.getCurrencyInstance(Locale.UK);
         System.out.println("Cost to drive 100km: " + currencyFormatter.format(totalCost));
 
         System.out.println("\n--------------------------------------------------\n");
 
 
-        // ======================================================================
         // Question 2
         // Pseudo-code for finding a maze and its entrance.
-        // ======================================================================
         /*
          ## Question 2: Maze Finding Algorithm (Pseudo-code)
 
@@ -234,14 +222,13 @@ public class Main{
         System.out.println("Modified string: " + string);
         System.out.println();
 
-        // --- Code Snippet 2: StringBuilder ---
         System.out.println("--- Using StringBuilder (Mutable) ---");
         StringBuilder builder = new StringBuilder("penguin");
-        // Note: The original lab sheet had a bug here, it tries to use 'index' before it's assigned.
-        // Corrected code:
+        
+//c
         int builderIndex = builder.indexOf(subString);
         System.out.println("Original builder: " + builder);
-        builder.replace(builderIndex, builderIndex + subString.length(), "uff"); // Modifies the existing object
+        builder.replace(builderIndex, builderIndex + subString.length(), "uff");
         System.out.println("Modified builder: " + builder);
 
         System.out.println("\n--------------------------------------------------\n");
@@ -253,22 +240,15 @@ public class Main{
         // ======================================================================
         System.out.println("## Question 6: StringBuilder Manipulation\n");
 
-        // Create a StringBuilder with "wombat"
         StringBuilder sb = new StringBuilder("wombat");
         System.out.println("Initial:      " + sb);
 
-        // Insert "le" after the fourth character (at index 4)
         sb.insert(4, "le");
-        System.out.println("After insert: " + sb); // "wombleat"
+        System.out.println("After insert: " + sb); 
 
-        // Delete the last two characters
         sb.delete(sb.length() - 2, sb.length());
-        System.out.println("After delete: " + sb); // "womble"
+        System.out.println("After delete: " + sb);
 
-        // Append emoticons using their hexadecimal Unicode code points
-        // 0x1F642 is a slightly smiling face 🙂
-        // 0x1F42A is a dromedary camel 🐪
-        // 0x1F914 is a thinking face 🤔 (my favourite)
         sb.appendCodePoint(0x1F642)
           .appendCodePoint(0x1F42A)
           .appendCodePoint(0x1F914);

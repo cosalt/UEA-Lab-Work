@@ -144,6 +144,16 @@ link:hover {
     display: none;
 }
 
+.current-date {
+    color: dodgerblue;
+}
+
+
+.newPara {
+    color: dodgerblue;
+}
+
+
 @media only screen and (max-width: 786px){
     header h1{
         display: inline-block;
@@ -199,3 +209,6 @@ link:hover {
         padding-top: 10px
     }
 }
+
+
+

@@ -17,9 +17,15 @@ header {
     height: 100px;
 }
 
-header h1 {
+header > h1 {
     padding: 16px;
     line-height: 200%;
+}
+
+nav {
+    text-align: center;
+    padding: 8px;
+    height: 100px;
 }
 
 nav ul {
@@ -34,12 +40,6 @@ nav ul li {
 nav ul li a {
     text-decoration: none;
     padding: 5px;
-}
-
-nav {
-    text-align: center;
-    padding: 8px;
-    height: auto;
 }
 
 a:hover {
@@ -58,7 +58,7 @@ main {
     margin-right: 20%;
     padding: 16px;
     border: 2px solid #a6a0ba;
-    border-radius: 20px;
+    /* border-radius: 20px; */
 }
 
 section {
@@ -112,6 +112,7 @@ section {
     cursor: pointer
 }
 
+
 p:has(.btn){ 
     text-align: center;
 }
@@ -143,7 +144,6 @@ link:hover {
     display: none;
 }
 
-
 @media only screen and (max-width: 786px){
     header h1{
         display: inline-block;
@@ -151,19 +151,13 @@ link:hover {
     }
     
     header{
-        height: 18vh;
+        height: auto;
     }
     h1{
         line-height: 50%;
     }
     nav ul li {
         display: block;
-        width: 70%;
-        padding: 10px;
-        font-size: small;
-    }
-    nav{
-        position: relative;
         width: 70%;
         padding: 10px;
         font-size: small;
@@ -185,7 +179,7 @@ link:hover {
     padding: 2%;
     opacity: 0.5;
     display: block;
-    margin-bottom: 10px;
+    margin-bottom: 16px;
     }
 
     .services{

@@ -4,8 +4,8 @@ import java.util.Locale;
 public class Main{
     public static void main(String[] args) {
 
-        // Question 1
-        // Computes the cost of driving 100km.
+        // Question 1!!!!
+        // Computes the cost of driving 100km...
         System.out.println("## Question 1: Petrol Cost Calculation\n");
 
         double kmPerMile = 1 / 0.6214; // km in one mile
@@ -57,7 +57,7 @@ public class Main{
              MOVE forward until wall is hit
              // Mouse is now in the North-West corner
 
-             // Step 2: Systematically scan the garden
+             // Step 2: scan the garden
              TURN until facing South
              LOOP
                  MOVE forward until a wall is hit
@@ -118,11 +118,8 @@ public class Main{
          - **Can you find a better solution?** A more efficient search pattern for `findMaze` could be a spiral, starting from the center of the garden and moving outwards. However, the lawnmower pattern is simple and guaranteed to work. For a known rectangular garden, one could also implement a more direct grid search.
         */
 
-
-        // ======================================================================
         // Question 3
         // Predicted output for the String manipulation code.
-        // ======================================================================
         System.out.println("## Question 3: String Method Output\n");
         /*
          * Predicted Output:
@@ -153,9 +150,7 @@ public class Main{
          * Predicted Output:
          *
          * n == 110
-         * o == 111
-         *
-         * Explanation:
+         * o == 111    
          * In Java, when a 'char' is compared to an 'int', the 'char' is promoted
          * to an 'int' using its numeric (Unicode) value.
          *
@@ -165,13 +160,13 @@ public class Main{
          * value of 111. The code point at index 3 is also 111. The expression
          * (c == codePoint) becomes (111 == 111), which is true.
          */
-        // --- Actual Code to Verify ---
+        // --- code ---
         char c = 'n';
         int codePoint = (int) c;
         if (c == codePoint) {
             System.out.format("%c == %d\n", c, codePoint);
         }
-        if (c != codePoint) { // This block will not execute
+        if (c != codePoint) { // not execute
             System.out.format("%c != %d\n", c, codePoint);
         }
 
@@ -186,11 +181,8 @@ public class Main{
 
         System.out.println("\n--------------------------------------------------\n");
 
-
-        // ======================================================================
         // Question 5
         // Difference between String and StringBuilder.
-        // ======================================================================
         System.out.println("## Question 5: String vs. StringBuilder\n");
         /*
          * ### What is the difference between the two code snippets?
@@ -209,7 +201,7 @@ public class Main{
          * memory and performance-efficient if you need to perform many modifications
          * on a sequence of characters.
          *
-         * In summary: `String.replace()` returns a new string, while `StringBuilder.replace()`
+         * conCLUDEeeeededede: `String.replace()` returns a new string, while `StringBuilder.replace()`
          * modifies the builder in place.
          */
 
@@ -234,10 +226,8 @@ public class Main{
         System.out.println("\n--------------------------------------------------\n");
 
 
-        // ======================================================================
         // Question 6
         // Manipulating a StringBuilder object.
-        // ======================================================================
         System.out.println("## Question 6: StringBuilder Manipulation\n");
 
         StringBuilder sb = new StringBuilder("wombat");
@@ -258,10 +248,8 @@ public class Main{
         System.out.println("\n--------------------------------------------------\n");
 
 
-        // ======================================================================
         // Question 7
         // Predicted output for the surrogate pair code and explanation.
-        // ======================================================================
         System.out.println("## Question 7: Surrogate Pairs and Code Points\n");
         /*
          * Predicted Output:
@@ -270,38 +258,6 @@ public class Main{
          * 55357 != 128578
          *
          * ### Explanation
-         *
-         * This question demonstrates how Java handles Unicode characters outside the
-         * Basic Multilingual Plane (BMP), which have code points greater than 0xFFFF.
-         *
-         * 1.  **UTF-16 Surrogate Pairs:** The string `"\uD83D\uDE42"` is a surrogate pair.
-         * It's a special two-`char` sequence that represents a single conceptual
-         * character: the "slightly smiling face" emoji (🙂). The emoji's actual Unicode
-         * code point is `0x1F642` (128578 in decimal).
-         *
-         * 2.  **`text.charAt(0)`:** This method is "dumb" in the context of surrogate pairs.
-         * It returns only the first 16-bit `char` unit at the specified index. In this case,
-         * it returns the high surrogate, `\uD83D`, whose numeric value is 55357.
-         *
-         * 3.  **`text.codePointAt(0)`:** This method is "smart." It recognizes that the `char`
-         * at index 0 is a high surrogate and looks ahead to the next `char` to form the
-         * complete character. It correctly returns the full code point for the emoji,
-         * which is `0x1F642` (128578).
-         *
-         * 4.  **The Comparison:** The `if` statement compares `c` (the `char` \uD83D, which gets
-         * promoted to the `int` 55357) with `codePoint` (the `int` 128578). Since
-         * `55357 != 128578`, the condition is false, and the `else` block is executed.
          */
-        // --- Actual Code to Verify ---
-        String text3 = "\uD83D\uDE42";
-        char c3 = text3.charAt(0);
-        int codePoint3 = text3.codePointAt(0);
-
-        System.out.println(text3);
-        if (c3 == codePoint3) {
-            System.out.println((int) c3 + " == " + codePoint3);
-        } else {
-            System.out.println((int) c3 + " != " + codePoint3);
-        }
     }
 }

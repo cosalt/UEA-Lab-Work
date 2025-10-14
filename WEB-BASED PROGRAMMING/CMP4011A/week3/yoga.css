@@ -137,23 +137,63 @@ link:hover {
     border-bottom: 3px solid #32312f;
 }
 
-@media screen and (max-width: 786px){
- header h1{
-    display: inline-block;
- }
- header{
-    height: 18vh;
- }
- header h1{
-    line-height: 50%;
- }
-}
+
 
 #hamburger {
+    display: none;
+}
+
+
+@media only screen and (max-width: 786px){
+    header h1{
+        display: inline-block;
+    }
+    header{
+        height: 18vh;
+    }
+    header h1{
+        line-height: 50%;
+    }
+
+    nav ul li {
+        display: block;
+        width: 70%;
+        padding: 10px;
+        font-size: small;
+        margin: 0 auto;
+    }
+    nav{
+        position: relative;
+        width: 70%;
+        padding: 10px;
+        font-size: small;
+    }
+
+    #wrapper{
+        position: relative;
+    }
+
+    nav{
+        position : absolute;
+        top: 20px;
+        right: 10px;
+    }
+
+    #hamburger {
     float: right;
     background-color: #7f669a;
     padding: 2%;
     opacity: 0.5;
     display: block;
     margin-bottom: 10px;
+    }
+
+    .services{
+        width: 92%;
+        background-color: white;
+        padding: 24px 11px;
+        margin: auto auto 20px 15px;
+        border-radius: 20px;
+        box-sizing: border-box;
+    }
 }

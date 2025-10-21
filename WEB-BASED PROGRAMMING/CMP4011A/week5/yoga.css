@@ -1,0 +1,277 @@
+html {
+    background-color: white;
+}
+
+body {
+    font-family: sans-serif, Arial;
+    color: #3f2860;
+    background-color: #eff4f7;
+    font-size: 16px;
+    line-height: 1.5;
+}
+
+header {
+    color: #000000;
+    background-color: #bab0a0;
+    text-align: center;
+    height: 100px;
+}
+
+header > h1 {
+    padding: 16px;
+    line-height: 200%;
+}
+
+nav {
+    text-align: center;
+    padding: 8px;
+    height: 100px;
+}
+
+nav ul {
+    list-style-type: none;
+}
+
+nav ul li {
+    display: inline;
+    margin-right: 25px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    padding: 5px;
+}
+
+a:hover {
+    background-color: #7f869a;
+    color: #ffffff;
+}
+
+a:visited {
+    color: #003366;
+}
+
+main {
+    margin-top: auto;
+    margin-bottom: auto;
+    margin-left: 20%;
+    margin-right: 20%;
+    padding: 16px;
+    border: 2px solid #a6a0ba;
+    /* border-radius: 20px; */
+}
+
+section {
+    margin-top: 10px;
+    margin-bottom: 10px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: #e4d8c5;
+    border-radius: 20px;
+    overflow: hidden;
+}
+
+.services {
+    float: left;
+    width: 47%;
+    height: 550px;
+    background-color: white;
+    padding-top: 24px;
+    padding-bottom: 24px;
+    padding-left: 11px;
+    padding-right: 11px;
+    margin-top: auto;
+    margin-right: auto;
+    margin-bottom: 20px;
+    margin-left: 15px;
+    border-radius: 20px;
+    box-sizing: border-box;
+}
+
+.services img{
+    display:block;
+    margin-left:auto;
+    margin-right:auto;
+    width: 80%;
+}
+
+.btn {
+    background-color: #B8195A;
+    color: #ffffff;
+    padding-top: 6px;
+    padding-bottom: 6px;
+    padding-left: 10px;
+    padding-right: 10px;
+    font-weight: 700;
+    font-size: 16px;
+    border: 2px solid #B8195A;
+    text-transform: uppercase;
+    border-radius: 10px;
+    cursor: pointer
+}
+
+
+p:has(.btn){ 
+    text-align: center;
+}
+
+footer {
+    background-color: #a59c96;
+    font-size: 0.9em;
+    text-align: center;
+    color: #000000;
+    padding: 16px;
+    margin-top: 32px;
+
+}
+footer:link {
+    color: #000000;
+}
+
+link:hover {
+    color: #ffffff;
+}
+
+.active {
+    border-bottom: 3px solid #32312f;
+}
+
+
+
+#hamburger {
+    display: none;
+}
+
+.current-date {
+    color: dodgerblue;
+}
+
+
+.newPara {
+    color: dodgerblue;
+}
+
+form {
+    display: flex;
+}
+
+fieldset {
+    display: flex;
+    flex-wrap: wrap;
+
+    margin-top: auto;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: auto;
+
+    width: 92%;
+    border-radius: 3px solid #344370;
+    border-radius: 5px;
+}
+
+legend {
+    padding: 5px;
+    font-size: medium;
+    word-spacing: 4px;
+}
+
+input, textarea {
+    display: block;
+    width: 95%;
+    padding: 10px;
+    margin-top: 0px;
+    margin-bottom: 0px;
+    margin-left: 5px;
+    margin-right: 5px;
+    border: 1px solid dodgerblue;
+}
+
+label {
+    display: block;
+    width: 100%;
+    margin: 1%;
+}
+
+input[type="submit"] {
+    background-color: #B8195A;
+    color: #fff;
+    margin: 2% 40%;
+    padding: 6px 10px;
+    font-weight: 700;
+    font-size: 16px;
+    border: 2px solid #B8195A;
+    min-width: 150px;
+    border-radius: 10px;
+}
+
+input[type="submit"]:hover {
+    cursor: pointer;
+}
+
+@media only screen and (max-width: 786px){
+    header h1{
+        display: inline-block;
+        line-height: 50%;
+    }
+    
+    header{
+        height: auto;
+    }
+    h1{
+        line-height: 50%;
+    }
+    nav ul li {
+        display: block;
+        width: 70%;
+        padding: 10px;
+        font-size: small;
+    }
+
+    #wrapper{
+        position: relative;
+    }
+
+    nav{
+        position : absolute;
+        top: 20px;
+        right: 10px;
+    }
+
+    #hamburger {
+    float: right;
+    background-color: #7f669a;
+    padding: 2%;
+    opacity: 0.5;
+    display: block;
+    margin-bottom: 16px;
+    }
+
+    .services{
+        width: 92%;
+        background-color: white;
+        padding: 24px 11px;
+        margin: auto auto 20px 15px;
+        border-radius: 20px;
+        box-sizing: border-box;
+    }
+
+    main{
+        margin-top: 2%;
+    }
+
+    section {
+        padding-top: 10px
+    }
+
+    ul {
+        height: 0;
+        overflow: hidden;
+    }
+
+    nav ul.shownav {
+        height: 300px;   
+    }
+}
+
